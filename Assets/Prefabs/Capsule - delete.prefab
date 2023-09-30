@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2516605050863824437}
   - component: {fileID: 2417908511218042174}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: Capsule - delete
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
