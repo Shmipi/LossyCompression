@@ -131,7 +131,7 @@ PrefabInstance:
     - target: {fileID: 1740613546983666654, guid: 66c6d6e88a39b5b43a460771f6a7d441, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -1052670065847772791, guid: f817652857dac6c498880067f009f76c, type: 3}
+      objectReference: {fileID: 2724618880875993593, guid: 2a6cd1a3cff659f48bcbeacd96af5cb3, type: 3}
     - target: {fileID: 1907516278460406735, guid: 66c6d6e88a39b5b43a460771f6a7d441, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.8819473
@@ -188,6 +188,10 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 0.765625
       objectReference: {fileID: 0}
+    - target: {fileID: 2516605050863824437, guid: 66c6d6e88a39b5b43a460771f6a7d441, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1848706941}
     - target: {fileID: 2516605050863824437, guid: 66c6d6e88a39b5b43a460771f6a7d441, type: 3}
       propertyPath: maxSpeed
       value: 5
