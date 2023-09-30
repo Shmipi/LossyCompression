@@ -40,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //animation variable
+        //Set Speed animation variable / sar
         animator.SetFloat("Speed", Mathf.Abs(moveDirection));
         
         // Movement controls
@@ -93,6 +93,8 @@ public class PlayerMovement : MonoBehaviour
         Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheckPos, colliderRadius);
         //Check if any of the overlapping colliders are not player collider, if so, set isGrounded to true
         isGrounded = false;
+        //Set Jump animation boolean / sar
+        animator.SetBool("IsJumping", true);
         if (colliders.Length > 0)
         {
             for (int i = 0; i < colliders.Length; i++)
@@ -100,6 +102,8 @@ public class PlayerMovement : MonoBehaviour
                 if (colliders[i] != mainCollider)
                 {
                     isGrounded = true;
+                    //Set Jump animation boolean / sar
+                    animator.SetBool("IsJumping", false);
                     break;
                 }
             }

@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 2a6cd1a3cff659f48bcbeacd96af5cb3
+guid: b64a7a4fe2399e142a934864ada8ac1f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5322171355652796756
-    second: Character_Walk_V2_Sheet_0
+      213: 4378233960190231678
+    second: Character_Idle_Sheet_0
   - first:
-      213: 2724618880875993593
-    second: Character_Walk_V2_Sheet_1
+      213: -4793537269617274999
+    second: Character_Idle_Sheet_1
   - first:
-      213: 8553190471743544558
-    second: Character_Walk_V2_Sheet_2
+      213: -8658662807351158629
+    second: Character_Idle_Sheet_2
   - first:
-      213: -5265091462069714683
-    second: Character_Walk_V2_Sheet_3
+      213: -6511733458473538929
+    second: Character_Idle_Sheet_3
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -107,31 +107,10 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Character_Walk_V2_Sheet_0
+      name: Character_Idle_Sheet_0
       rect:
         serializedVersion: 2
         x: 5
-        y: 0
-        width: 54
-        height: 46
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cae4e80a959d326b0800000000000000
-      internalID: -5322171355652796756
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Character_Walk_V2_Sheet_1
-      rect:
-        serializedVersion: 2
-        x: 69
         y: 0
         width: 54
         height: 48
@@ -142,14 +121,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9f99feebf6acfc520800000000000000
-      internalID: 2724618880875993593
+      spriteID: e74c0b4079c92cc30800000000000000
+      internalID: 4378233960190231678
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_Walk_V2_Sheet_2
+      name: Character_Idle_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 0
+        width: 54
+        height: 49
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98fcdd2204fe97db0800000000000000
+      internalID: -4793537269617274999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Character_Idle_Sheet_2
       rect:
         serializedVersion: 2
         x: 133
@@ -163,14 +163,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: eec9784da6903b670800000000000000
-      internalID: 8553190471743544558
+      spriteID: b9892f16d0046d780800000000000000
+      internalID: -8658662807351158629
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_Walk_V2_Sheet_3
+      name: Character_Idle_Sheet_3
       rect:
         serializedVersion: 2
         x: 197
@@ -184,8 +184,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 501846df533aee6b0800000000000000
-      internalID: -5265091462069714683
+      spriteID: f8aa8af8beca1a5a0800000000000000
+      internalID: -6511733458473538929
       vertices: []
       indices: 
       edges: []
@@ -193,7 +193,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: d7057f147bab7d245af99ea179721f3c
+    spriteID: 16a9a374100d8094eb0409720c9010a2
     internalID: 0
     vertices: []
     indices: 
@@ -201,10 +201,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Character_Walk_V2_Sheet_0: -5322171355652796756
-      Character_Walk_V2_Sheet_1: 2724618880875993593
-      Character_Walk_V2_Sheet_2: 8553190471743544558
-      Character_Walk_V2_Sheet_3: -5265091462069714683
+      Character_Idle_Sheet_0: 4378233960190231678
+      Character_Idle_Sheet_1: -4793537269617274999
+      Character_Idle_Sheet_2: -8658662807351158629
+      Character_Idle_Sheet_3: -6511733458473538929
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
