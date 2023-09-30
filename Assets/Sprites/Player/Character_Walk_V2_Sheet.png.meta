@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: f817652857dac6c498880067f009f76c
+guid: 2a6cd1a3cff659f48bcbeacd96af5cb3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2955995942652991041
-    second: Character_Sheet_0
+      213: -5322171355652796756
+    second: Character_Walk_V2_Sheet_0
   - first:
-      213: -499711373248029411
-    second: Character_Sheet_1
+      213: 2724618880875993593
+    second: Character_Walk_V2_Sheet_1
   - first:
-      213: -9028570056873350410
-    second: Character_Sheet_2
+      213: 8553190471743544558
+    second: Character_Walk_V2_Sheet_2
   - first:
-      213: 7926514017757549192
-    second: Character_Sheet_3
+      213: -5265091462069714683
+    second: Character_Walk_V2_Sheet_3
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -60,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -107,13 +107,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Character_Sheet_0
+      name: Character_Walk_V2_Sheet_0
       rect:
         serializedVersion: 2
         x: 5
         y: 0
         width: 54
-        height: 49
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,20 +121,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 146d357f5aec50920800000000000000
-      internalID: 2955995942652991041
+      spriteID: cae4e80a959d326b0800000000000000
+      internalID: -5322171355652796756
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_Sheet_1
+      name: Character_Walk_V2_Sheet_1
       rect:
         serializedVersion: 2
         x: 69
         y: 0
         width: 54
-        height: 49
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,14 +142,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d1d1453572ba019f0800000000000000
-      internalID: -499711373248029411
+      spriteID: 9f99feebf6acfc520800000000000000
+      internalID: 2724618880875993593
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_Sheet_2
+      name: Character_Walk_V2_Sheet_2
       rect:
         serializedVersion: 2
         x: 133
@@ -163,20 +163,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6fae5526e5314b280800000000000000
-      internalID: -9028570056873350410
+      spriteID: eec9784da6903b670800000000000000
+      internalID: 8553190471743544558
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Character_Sheet_3
+      name: Character_Walk_V2_Sheet_3
       rect:
         serializedVersion: 2
         x: 197
         y: 0
         width: 54
-        height: 49
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,8 +184,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 882d79fa082a00e60800000000000000
-      internalID: 7926514017757549192
+      spriteID: 501846df533aee6b0800000000000000
+      internalID: -5265091462069714683
       vertices: []
       indices: 
       edges: []
@@ -201,10 +201,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Character_Sheet_0: 2955995942652991041
-      Character_Sheet_1: -499711373248029411
-      Character_Sheet_2: -9028570056873350410
-      Character_Sheet_3: 7926514017757549192
+      Character_Walk_V2_Sheet_0: -5322171355652796756
+      Character_Walk_V2_Sheet_1: 2724618880875993593
+      Character_Walk_V2_Sheet_2: 8553190471743544558
+      Character_Walk_V2_Sheet_3: -5265091462069714683
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
