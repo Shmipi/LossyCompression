@@ -1,47 +1,95 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class WhackAMole : MonoBehaviour
 {
-    [SerializeField] private Button mole1;
-    [SerializeField] private Button mole2;
-    [SerializeField] private Button mole3;
-    [SerializeField] private Button mole4;
-    [SerializeField] private Button mole5;
-    [SerializeField] private Button mole6;
+    [SerializeField] private GameObject mole1;
+    [SerializeField] private GameObject mole2;
+    [SerializeField] private GameObject mole3;
+    [SerializeField] private GameObject mole4;
+    [SerializeField] private GameObject mole5;
+    [SerializeField] private GameObject mole6;
+    [SerializeField] private TextMeshProUGUI scoreText;
 
     private int points;
 
-    public Button[] moles;
+    public List<GameObject> moles = new List<GameObject>();
 
-    public float timeRemaining = 5;
+    public float timeRemaining = 0.5f;
+    public bool timerIsRunning = false;
 
     // Start is called before the first frame update
-    void Awake()
+    void OnEnable()
     {
-        moles = new Button[] {mole1, mole2, mole3, mole4, mole5, mole6};
+        scoreText.text = "Score: 0";
 
-        for(int i = 0; i < moles.Length; i++)
+        moles.Add(mole1);
+        moles.Add(mole2);
+        moles.Add(mole3);
+        moles.Add(mole4);
+        moles.Add(mole5);
+        moles.Add(mole6);
+
+        for (int i = 0; i < moles.Count; i++)
         {
-            moles[i].enabled = false;
+            moles[i].SetActive(false);
         }
 
         points = 0;
+
+        timerIsRunning = true;
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (timeRemaining > 0)
+        if(timerIsRunning)
         {
-            timeRemaining -= Time.deltaTime;
-        } else
-        {
-            Debug.Log("Time has run out!");
+            if (timeRemaining > 0)
+            {
+                timeRemaining -= Time.deltaTime;
+            }
+            else
+            {
+                Debug.Log("Bing bong");
+                GameObject tempMole = moles[Random.Range(0, moles.Count)];
+                if(tempMole.activeInHierarchy != true)
+                {
+                    tempMole.SetActive(true);
+                    timeRemaining = Random.Range(1, 3);
+                }
+            }
         }
         
+    }
+
+    public void GainPoints()
+    {
+        points += 2;
+        scoreText.text = "Score: " + points;
+
+        if(points >= 10)
+        {
+            Win();
+        }
+    }
+
+    public void LosePoint()
+    {
+        points--;
+        if (points < 0)
+        {
+            points = 0;
+        }
+        scoreText.text = "Score: " + points;
+    }
+
+    public void Win()
+    {
+        gameObject.SetActive(false);
     }
 }
