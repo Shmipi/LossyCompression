@@ -14,8 +14,6 @@ public class WhackAMole : MonoBehaviour
     [SerializeField] private GameObject mole6;
     [SerializeField] private TextMeshProUGUI scoreText;
 
-    [SerializeField] AudioSource audioSource;
-
     GameObject PlayerObject;
 
     private int points;
@@ -53,7 +51,7 @@ public class WhackAMole : MonoBehaviour
         points = 0;
 
         timerIsRunning = true;
-        audioSource.Play();
+
     }
 
     // Update is called once per frame
@@ -88,7 +86,6 @@ public class WhackAMole : MonoBehaviour
 
         if (points >= 10)
         {
-            PlayerObject.GetComponent<AudioSource>().PlayOneShot(PlayerObject.GetComponent<AudioManager>().winSound);
             Win();
         }
     }
@@ -107,6 +104,7 @@ public class WhackAMole : MonoBehaviour
 
     public void Win()
     {
+        PlayerObject.GetComponent<AudioSource>().PlayOneShot(PlayerObject.GetComponent<AudioManager>().winSound);
         player.inMinigame = false;
         gameObject.SetActive(false);
     }
