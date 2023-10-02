@@ -1,11 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class MemoryScript : MonoBehaviour
 {
     private int points;
+
+    private PlayerMovement player;
+
+    [SerializeField] private TextMeshProUGUI scoreText;
 
     [SerializeField] private MemoryCard mCard1;
     [SerializeField] private MemoryCard mCard2;
@@ -33,6 +38,11 @@ public class MemoryScript : MonoBehaviour
 
     private MemoryCard guessCard1;
     private MemoryCard guessCard2;
+
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+    }
 
     // Start is called before the first frame update
     void OnEnable()
@@ -63,6 +73,8 @@ public class MemoryScript : MonoBehaviour
             mCards[i].idNumber = idNrs[tempIndex];
             idNrs.RemoveAt(tempIndex);
         }
+
+        scoreText.text = "Score: 0";
     }
 
     // Update is called once per frame
@@ -97,6 +109,11 @@ public class MemoryScript : MonoBehaviour
                 guessCard1.GetComponentInParent<Button>().enabled = false;
                 guessCard2.GetComponentInParent<Button>().enabled = false;
                 points++;
+                scoreText.text = "Score: " + points;
+                if (points >= 5)
+                {
+                    Win();
+                }
             } else
             {
                 Debug.Log("Epic fail!");
@@ -107,5 +124,11 @@ public class MemoryScript : MonoBehaviour
 
             secondGuess = false;
         }
+    }
+
+    void Win()
+    {
+        player.inMinigame = false;
+        gameObject.SetActive(false);
     }
 }
