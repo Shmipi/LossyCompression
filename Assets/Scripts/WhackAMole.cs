@@ -21,6 +21,13 @@ public class WhackAMole : MonoBehaviour
     public float timeRemaining = 0.5f;
     public bool timerIsRunning = false;
 
+    private PlayerMovement player;
+
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+    }
+
     // Start is called before the first frame update
     void OnEnable()
     {
@@ -90,6 +97,7 @@ public class WhackAMole : MonoBehaviour
 
     public void Win()
     {
+        player.inMinigame = false;
         gameObject.SetActive(false);
     }
 }

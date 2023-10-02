@@ -20,9 +20,13 @@ public class PlayerMovement : MonoBehaviour
     BoxCollider2D mainCollider;
     Transform t;
 
+    public bool inMinigame;
+
     // Use this for initialization
     void Start()
     {
+        inMinigame = false;
+
         t = transform;
         r2d = GetComponent<Rigidbody2D>();
         mainCollider = GetComponent<BoxCollider2D>();
@@ -42,45 +46,47 @@ public class PlayerMovement : MonoBehaviour
     {
         //Set Speed animation variable / sar
         animator.SetFloat("Speed", Mathf.Abs(moveDirection));
-        
-        // Movement controls
-        if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) && (isGrounded || Mathf.Abs(r2d.velocity.x) > 0.01f))
+        if(inMinigame == false)
         {
-            moveDirection = Input.GetKey(KeyCode.A) ? -1 : 1;
-        }
-        else
-        {
-            if (isGrounded || r2d.velocity.magnitude < 0.01f)
+            // Movement controls
+            if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)) && (isGrounded || Mathf.Abs(r2d.velocity.x) > 0.01f))
             {
-                moveDirection = 0;
+                moveDirection = Input.GetKey(KeyCode.A) ? -1 : 1;
             }
-        }
-
-        // Change facing direction
-        if (moveDirection != 0)
-        {
-            if (moveDirection > 0 && !facingRight)
+            else
             {
-                facingRight = true;
-                t.localScale = new Vector3(Mathf.Abs(t.localScale.x), t.localScale.y, transform.localScale.z);
+                if (isGrounded || r2d.velocity.magnitude < 0.01f)
+                {
+                    moveDirection = 0;
+                }
             }
-            if (moveDirection < 0 && facingRight)
+
+            // Change facing direction
+            if (moveDirection != 0)
             {
-                facingRight = false;
-                t.localScale = new Vector3(-Mathf.Abs(t.localScale.x), t.localScale.y, t.localScale.z);
+                if (moveDirection > 0 && !facingRight)
+                {
+                    facingRight = true;
+                    t.localScale = new Vector3(Mathf.Abs(t.localScale.x), t.localScale.y, transform.localScale.z);
+                }
+                if (moveDirection < 0 && facingRight)
+                {
+                    facingRight = false;
+                    t.localScale = new Vector3(-Mathf.Abs(t.localScale.x), t.localScale.y, t.localScale.z);
+                }
             }
-        }
 
-        // Jumping
-        if (Input.GetKeyDown(KeyCode.W) && isGrounded)
-        {
-            r2d.velocity = new Vector2(r2d.velocity.x, jumpHeight);
-        }
+            // Jumping
+            if (Input.GetKeyDown(KeyCode.W) && isGrounded)
+            {
+                r2d.velocity = new Vector2(r2d.velocity.x, jumpHeight);
+            }
 
-        // Camera follow
-        if (mainCamera)
-        {
-            mainCamera.transform.position = new Vector3(t.position.x, cameraPos.y, cameraPos.z);
+            // Camera follow
+            if (mainCamera)
+            {
+                mainCamera.transform.position = new Vector3(t.position.x, cameraPos.y, cameraPos.z);
+            }
         }
     }
 
