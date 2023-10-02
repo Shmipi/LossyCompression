@@ -807,6 +807,7 @@ MonoBehaviour:
   mole5: {fileID: 1608937271}
   mole6: {fileID: 1215487517}
   scoreText: {fileID: 680470513}
+  audioSource: {fileID: 1144488002}
   moles: []
   timeRemaining: 10
   timerIsRunning: 0
@@ -1733,6 +1734,10 @@ PrefabInstance:
       propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3861745771366318871, guid: 24944d4a9ecc9d84ab3f2d84378e1442, type: 3}
+      propertyPath: winSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 12f61e9a9fbd5e148b7e3a72ae83495b, type: 3}
     - target: {fileID: 5294278883781421548, guid: 24944d4a9ecc9d84ab3f2d84378e1442, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.891838

@@ -7,28 +7,32 @@ public class TalkingScript : MonoBehaviour
 
     AudioSource audioSource;
 
-    [SerializeField] AudioClip[] driveClips;
+    [SerializeField] AudioClip[] driveClips = new AudioClip[5];
 
-    [SerializeField] AudioClip[] foldyClips;
+    [SerializeField] AudioClip[] foldyClips = new AudioClip[5];
 
+    GameObject foldy;
 
 
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        foldy = GameObject.Find("Foldy");
+
     }
 
 
-    void playDrive()
+    public void playDrive()
     {
-        AudioClip driveClip = driveClips[UnityEngine.Random.Range(0, driveClips.Length)];
+        AudioClip driveClip = driveClips[Random.Range(0, 5)];
         audioSource.PlayOneShot(driveClip);
     }
 
-    void playFoldy()
+    public void playFoldy()
     {
-        AudioClip foldyClip = driveClips[UnityEngine.Random.Range(0, foldyClips.Length)];
+        AudioClip foldyClip = foldyClips[Random.Range(0, 5)];
         audioSource.PlayOneShot(foldyClip);
     }
+
 
 }
