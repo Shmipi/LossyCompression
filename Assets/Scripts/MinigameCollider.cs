@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class MinigameCollider : MonoBehaviour
@@ -25,6 +26,7 @@ public class MinigameCollider : MonoBehaviour
             miniGame.SetActive(true);
             player.inMinigame = true;
             isColliding = false;
+            gameObject.SetActive(false);
         }
     }
 
