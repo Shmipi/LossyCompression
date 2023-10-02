@@ -16,6 +16,8 @@ public class WhackAMole : MonoBehaviour
 
     public Button[] moles;
 
+    public float timeRemaining = 5;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -33,6 +35,13 @@ public class WhackAMole : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (timeRemaining > 0)
+        {
+            timeRemaining -= Time.deltaTime;
+        } else
+        {
+            Debug.Log("Time has run out!");
+        }
         
     }
 }

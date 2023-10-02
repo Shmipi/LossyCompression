@@ -1076,6 +1076,7 @@ GameObject:
   - component: {fileID: 1144487998}
   - component: {fileID: 1144488000}
   - component: {fileID: 1144487999}
+  - component: {fileID: 1144488001}
   m_Layer: 5
   m_Name: WhackAMole
   m_TagString: Untagged
@@ -1146,6 +1147,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1144487997}
   m_CullTransparentMesh: 1
+--- !u!114 &1144488001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144487997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa1e29e4ca0d74048b5e2e27f426275d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mole1: {fileID: 2110170688}
+  mole2: {fileID: 1602273791}
+  mole3: {fileID: 1157677865}
+  mole4: {fileID: 900576306}
+  mole5: {fileID: 1608937273}
+  mole6: {fileID: 1215487519}
+  moles: []
+  timeRemaining: 10
 --- !u!1 &1157677863
 GameObject:
   m_ObjectHideFlags: 0
