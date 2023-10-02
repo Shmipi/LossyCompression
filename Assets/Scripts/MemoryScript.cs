@@ -10,6 +10,8 @@ public class MemoryScript : MonoBehaviour
 
     private PlayerMovement player;
 
+    GameObject foldy;
+
     [SerializeField] private TextMeshProUGUI scoreText;
 
     [SerializeField] private MemoryCard mCard1;
@@ -39,9 +41,13 @@ public class MemoryScript : MonoBehaviour
     private MemoryCard guessCard1;
     private MemoryCard guessCard2;
 
+    AudioSource audioSource;
+
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+        audioSource = GetComponent<AudioSource>();
+        foldy = GameObject.Find("Foldy");
     }
 
     // Start is called before the first frame update
@@ -75,6 +81,7 @@ public class MemoryScript : MonoBehaviour
         }
 
         scoreText.text = "Score: 0";
+        audioSource.Play();
     }
 
     // Update is called once per frame
@@ -110,6 +117,7 @@ public class MemoryScript : MonoBehaviour
                 guessCard2.GetComponentInParent<Button>().enabled = false;
                 points++;
                 scoreText.text = "Score: " + points;
+                audioSource.PlayOneShot(foldy.GetComponent<AudioManager>().coinSound);
                 if (points >= 5)
                 {
                     Win();
@@ -124,10 +132,12 @@ public class MemoryScript : MonoBehaviour
 
             secondGuess = false;
         }
+
     }
 
     void Win()
     {
+        Destroy(audioSource);
         player.inMinigame = false;
         gameObject.SetActive(false);
     }

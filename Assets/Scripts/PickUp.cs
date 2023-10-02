@@ -53,8 +53,8 @@ public class PickUp : MonoBehaviour
 
         Debug.Log("wow a pickUp!");
 
-        Player.GetComponent<AudioSource>().PlayOneShot(Player.GetComponent<AudioManager>().pickupSound);
-        Player.GetComponent<AudioSource>().PlayOneShot(Player.GetComponent<AudioManager>().pickupVox);
+      //  Player.GetComponent<AudioSource>().PlayOneShot(Player.GetComponent<AudioManager>().pickupSound);
+        Player.GetComponent<TalkingScript>().playFoldy();
 
 
         Destroy(gameObject);
