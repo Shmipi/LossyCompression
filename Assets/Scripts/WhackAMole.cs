@@ -14,6 +14,8 @@ public class WhackAMole : MonoBehaviour
     [SerializeField] private GameObject mole6;
     [SerializeField] private TextMeshProUGUI scoreText;
 
+    GameObject PlayerObject;
+
     private int points;
 
     public List<GameObject> moles = new List<GameObject>();
@@ -26,6 +28,7 @@ public class WhackAMole : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
+        PlayerObject = GameObject.Find("Foldy");
     }
 
     // Start is called before the first frame update
@@ -67,6 +70,7 @@ public class WhackAMole : MonoBehaviour
                 if(tempMole.activeInHierarchy != true)
                 {
                     tempMole.SetActive(true);
+                    PlayerObject.GetComponent<AudioSource>().PlayOneShot(PlayerObject.GetComponent<AudioManager>().moleAppearing);
                     timeRemaining = Random.Range(1, 3);
                 }
             }
@@ -78,8 +82,9 @@ public class WhackAMole : MonoBehaviour
     {
         points += 2;
         scoreText.text = "Score: " + points;
+        PlayerObject.GetComponent<AudioSource>().PlayOneShot(PlayerObject.GetComponent<AudioManager>().coinSound);
 
-        if(points >= 10)
+        if (points >= 10)
         {
             Win();
         }
@@ -88,15 +93,18 @@ public class WhackAMole : MonoBehaviour
     public void LosePoint()
     {
         points--;
+        PlayerObject.GetComponent<AudioSource>().PlayOneShot(PlayerObject.GetComponent<AudioManager>().moleDisappearing);
         if (points < 0)
         {
             points = 0;
+            PlayerObject.GetComponent<AudioSource>().PlayOneShot(PlayerObject.GetComponent<AudioManager>().loseSound);
         }
         scoreText.text = "Score: " + points;
     }
 
     public void Win()
     {
+        PlayerObject.GetComponent<AudioSource>().PlayOneShot(PlayerObject.GetComponent<AudioManager>().winSound);
         player.inMinigame = false;
         gameObject.SetActive(false);
     }

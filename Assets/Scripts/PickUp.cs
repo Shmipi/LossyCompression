@@ -12,10 +12,17 @@ public class PickUp : MonoBehaviour
     public float freq;
 
     Vector3 initialPosition;
+
+    GameObject Player;
+    GameObject AudioManager;
+
+    AudioSource audioSource;
         
     void Start()
     {
         initialPosition = transform.position;
+        Player = GameObject.Find("Foldy");
+        audioSource = GetComponent<AudioSource>();
     }
 
     void FixedUpdate()
@@ -41,9 +48,14 @@ public class PickUp : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        
         collision.gameObject.CompareTag("Player");
 
         Debug.Log("wow a pickUp!");
+
+        Player.GetComponent<AudioSource>().PlayOneShot(Player.GetComponent<AudioManager>().pickupSound);
+        Player.GetComponent<AudioSource>().PlayOneShot(Player.GetComponent<AudioManager>().pickupVox);
+
 
         Destroy(gameObject);
     }
