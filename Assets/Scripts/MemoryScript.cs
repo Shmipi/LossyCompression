@@ -46,7 +46,6 @@ public class MemoryScript : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
-        audioSource = GetComponent<AudioSource>();
         foldy = GameObject.Find("Foldy");
     }
 
@@ -81,6 +80,7 @@ public class MemoryScript : MonoBehaviour
         }
 
         scoreText.text = "Score: 0";
+        audioSource = GetComponent<AudioSource>();
         audioSource.Play();
     }
 
