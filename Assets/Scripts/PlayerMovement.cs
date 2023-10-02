@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public Camera mainCamera;
 
     public Animator animator;
+    public GameObject spawnPos;
 
     bool facingRight = true;
     float moveDirection = 0;
@@ -25,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        gameObject.transform.position = spawnPos.transform.position;
         inMinigame = false;
 
         t = transform;
@@ -117,5 +119,10 @@ public class PlayerMovement : MonoBehaviour
 
         // Apply movement velocity
         r2d.velocity = new Vector2((moveDirection) * maxSpeed, r2d.velocity.y);
+    }
+
+    public void Respawn()
+    {
+        gameObject.transform.position = spawnPos.transform.position;
     }
 }
