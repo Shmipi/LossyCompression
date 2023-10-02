@@ -51,10 +51,8 @@ public class WhackAMole : MonoBehaviour
         }
 
         points = 0;
-
-        timerIsRunning = true;
-
         audioSource.Play();
+        timerIsRunning = true;
     }
 
     // Update is called once per frame
