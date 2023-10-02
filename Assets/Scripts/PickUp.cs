@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class PickUp : MonoBehaviour
 {
+    private float initialPosition;
+    private float newPosition;
+    public float offset = 9;
+    
+    
     void Start()
     {
-        
+        initialPosition = transform.position.y;
+        newPosition = initialPosition + offset;
     }
 
     void Update()
