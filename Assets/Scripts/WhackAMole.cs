@@ -25,6 +25,8 @@ public class WhackAMole : MonoBehaviour
 
     private PlayerMovement player;
 
+    [SerializeField] AudioSource audioSource;
+
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMovement>();
@@ -52,6 +54,7 @@ public class WhackAMole : MonoBehaviour
 
         timerIsRunning = true;
 
+        audioSource.Play();
     }
 
     // Update is called once per frame
