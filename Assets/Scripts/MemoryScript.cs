@@ -41,7 +41,7 @@ public class MemoryScript : MonoBehaviour
     private MemoryCard guessCard1;
     private MemoryCard guessCard2;
 
-    AudioSource audioSource;
+    [SerializeField] AudioSource audioSource;
 
     private void Start()
     {
@@ -80,8 +80,6 @@ public class MemoryScript : MonoBehaviour
         }
 
         scoreText.text = "Score: 0";
-        audioSource = GetComponent<AudioSource>();
-        audioSource.Play();
     }
 
     // Update is called once per frame
@@ -137,8 +135,8 @@ public class MemoryScript : MonoBehaviour
 
     void Win()
     {
-        Destroy(audioSource);
         player.inMinigame = false;
+        Destroy(audioSource);
         gameObject.SetActive(false);
     }
 }
