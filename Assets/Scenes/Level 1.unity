@@ -1389,7 +1389,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 1}
+  m_BackGroundColor: {r: 0.5294118, g: 0.627451, b: 0.627451, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1414,7 +1414,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 3
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1788,6 +1788,10 @@ PrefabInstance:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 1444596079}
+    - target: {fileID: 3535071935321775002, guid: 24944d4a9ecc9d84ab3f2d84378e1442, type: 3}
+      propertyPath: cameraHeight
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5294278883781421548, guid: 24944d4a9ecc9d84ab3f2d84378e1442, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.891838
@@ -1828,13 +1832,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6260960662706577530, guid: 24944d4a9ecc9d84ab3f2d84378e1442, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 0.84375
+      objectReference: {fileID: 0}
+    - target: {fileID: 6260960662706577530, guid: 24944d4a9ecc9d84ab3f2d84378e1442, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 6913570626951122913, guid: 24944d4a9ecc9d84ab3f2d84378e1442, type: 3}
       propertyPath: m_Name
       value: Foldy
       objectReference: {fileID: 0}
     - target: {fileID: 7024233558554680573, guid: 24944d4a9ecc9d84ab3f2d84378e1442, type: 3}
+      propertyPath: m_Size.x
+      value: 0.84375
+      objectReference: {fileID: 0}
+    - target: {fileID: 7024233558554680573, guid: 24944d4a9ecc9d84ab3f2d84378e1442, type: 3}
+      propertyPath: m_Size.y
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7024233558554680573, guid: 24944d4a9ecc9d84ab3f2d84378e1442, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4378233960190231678, guid: b64a7a4fe2399e142a934864ada8ac1f, type: 3}
+    - target: {fileID: 7024233558554680573, guid: 24944d4a9ecc9d84ab3f2d84378e1442, type: 3}
       propertyPath: m_SortingOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7024233558554680573, guid: 24944d4a9ecc9d84ab3f2d84378e1442, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -23,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
 
     public bool inMinigame;
 
+    public float cameraHeight = 1;
+
     // Use this for initialization
     void Start()
     {
@@ -87,7 +89,7 @@ public class PlayerMovement : MonoBehaviour
             // Camera follow
             if (mainCamera)
             {
-                mainCamera.transform.position = new Vector3(t.position.x, t.position.y, cameraPos.z);
+                mainCamera.transform.position = new Vector3(t.position.x, t.position.y + cameraHeight, cameraPos.z);
             }
         }
     }
